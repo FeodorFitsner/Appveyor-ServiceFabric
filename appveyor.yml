@@ -1,0 +1,7 @@
+install:
+  - Webpicmd /install /products:"MicrosoftAzure-ServiceFabric" /AcceptEULA
+  - cmd: SET PATH=%PATH%;C:\Program Files\Microsoft Service Fabric\bin\Fabric\Fabric.Code;C:\Program Files\Microsoft SDKs\Service Fabric\Tools\ServiceFabricLocalClusterManager
+  - ps: Restart-Computer -Force
+  - ps: Start-Sleep -s 10
+build_script:
+  - ps: Test-ServiceFabricApplicationPackage -ApplicationPackagePath pkg
