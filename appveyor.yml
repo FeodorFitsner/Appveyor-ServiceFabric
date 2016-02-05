@@ -9,3 +9,6 @@ build_script:
   - ps: Get-Command Test-ServiceFabricApplicationPackage | fl *
   - dir C:\windows\system32\windowspowershell\v1.0\Modules\ServiceFabric
   - powershell .\test.ps1
+
+on_finish:
+- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
