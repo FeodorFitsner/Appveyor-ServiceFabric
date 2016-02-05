@@ -5,5 +5,5 @@ install:
   - ps: Restart-Computer -Force
   - ps: Start-Sleep -s 10
 build_script:
-  - ps: Get-Command Test-ServiceFabricApplicationPackage | ft *
+  - ps: Get-Command Test-ServiceFabricApplicationPackage | fl *
   - ps: Test-ServiceFabricApplicationPackage -ApplicationPackagePath pkg
