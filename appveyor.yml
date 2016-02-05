@@ -5,6 +5,7 @@ install:
   - ps: Restart-Computer -Force
   - ps: Start-Sleep -s 10
 build_script:
+  - ps: $env:psmodulepath
   - ps: Import-module ServiceFabric
   - ps: Get-Command Test-ServiceFabricApplicationPackage | fl *
   - dir C:\windows\system32\windowspowershell\v1.0\Modules\ServiceFabric
