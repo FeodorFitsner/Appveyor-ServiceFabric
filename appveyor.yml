@@ -1,3 +1,4 @@
+os: Visual Studio 2015
 install:
   - Webpicmd /install /products:"MicrosoftAzure-ServiceFabric" /AcceptEULA
   - cmd: SET PATH=%PATH%;C:\Program Files\Microsoft Service Fabric\bin\Fabric\Fabric.Code;C:\Program Files\Microsoft SDKs\Service Fabric\Tools\ServiceFabricLocalClusterManager
