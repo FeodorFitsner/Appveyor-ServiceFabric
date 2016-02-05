@@ -8,4 +8,4 @@ build_script:
   - ps: Import-module ServiceFabric
   - ps: Get-Command Test-ServiceFabricApplicationPackage | fl *
   - dir C:\windows\system32\windowspowershell\v1.0\Modules\ServiceFabric
-  - powershell -Command {Test-ServiceFabricApplicationPackage -ApplicationPackagePath pkg}
+  - powershell test.ps1
