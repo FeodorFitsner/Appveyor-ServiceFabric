@@ -11,7 +11,7 @@ build_script:
   - dir C:\windows\system32\windowspowershell\v1.0\Modules\ServiceFabric
   - SET PATH=%PATH%;C:\Program Files\Microsoft Service Fabric\bin\Fabric\Fabric.Code;C:\Program Files\Microsoft SDKs\Service Fabric\Tools\ServiceFabricLocalClusterManager
   - '"C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\gacutil" /i "C:\Program Files\Microsoft Service Fabric\bin\Fabric\Fabric.Code\System.Fabric.Management.dll"'
-  - powershell .\test.ps1
+  - test.cmd
 
-on_finish:
-- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+#on_finish:
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
